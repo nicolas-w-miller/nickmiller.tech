@@ -12,6 +12,7 @@ Thumbs.db  # Windows
 
 # Individual files
 index-demo.html
+CNAME
 
 # IDE/editor specific
 .vscode/
