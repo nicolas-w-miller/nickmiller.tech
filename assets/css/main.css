@@ -3186,6 +3186,12 @@ input, select, textarea {
 					padding: 2.25em 0 0 0;
 				}
 
+		/* Form */
+		
+			form {
+				margin: 0;
+			}
+
 		/* Poptrox */
 
 			.poptrox-popup {
