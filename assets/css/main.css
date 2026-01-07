@@ -109,20 +109,28 @@ input, select, textarea {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: #49bf9d;
-		text-decoration: none;
+		transition: 
+			color 0.2s ease-in-out, 
+			border-color 0.1s ease-in-out, 
+			font-size 0.1s ease-in-out, 
+			font-weight 0.1s ease-in-out, 
+			text-decoration-thickness 0.1s ease-in-out, 
+			text-underline-offset 0.1s ease-in-out;
+		color: #226250;
+		/* text-decoration: none; */
+		text-decoration: underline;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
-			text-decoration: none;
+			color: #226250 !important;
+			font-size: 0.98rem;
+			font-weight: 600;
+			text-decoration-thickness: 2px;
 		}
 
 	strong, b {
-		color: #787878;
+		color: #585858;
 		font-weight: 400;
 	}
 
@@ -135,7 +143,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #585858;
 		font-family: "Poppins", "Source Sans Pro", Helvetica, sans-serif;
 		font-weight: 400;
 		line-height: 1em;
@@ -1806,7 +1814,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #787878;
+		color: #585858;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 400;
@@ -1846,7 +1854,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49bf9d;
+			border-color: #226250;
 		}
 
 	select {
@@ -1860,7 +1868,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #787878;
+			color: #585858;
 			background: #fff;
 		}
 
@@ -1943,15 +1951,15 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #787878;
-			border-color: #787878;
+			background: #585858;
+			border-color: #585858;
 			color: #fff;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #49bf9d;
+			border-color: #226250;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2393,7 +2401,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #787878;
+			color: #585858;
 			font-size: 0.9em;
 			font-weight: 400;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2469,8 +2477,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #226250;
+			color: #226250 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2478,8 +2486,8 @@ input, select, textarea {
 		input[type="button"]:active,
 		.button:active {
 			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #226250;
+			color: #226250 !important;
 		}
 
 		input[type="submit"].icon,
@@ -2522,8 +2530,8 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #49bf9d;
-			border-color: #49bf9d;
+			background-color: #226250;
+			border-color: #226250;
 			color: #ffffff !important;
 		}
 
@@ -2531,16 +2539,16 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #5cc6a7;
-				border-color: #5cc6a7;
+				background-color: #2F836B;
+				border-color: #2F836B;
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: #3eb08f;
-				border-color: #3eb08f;
+				background-color: #2F836B;
+				border-color: #2F836B;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2630,7 +2638,7 @@ input, select, textarea {
 
 		#header strong, #header b {
 			color: #ffffff;
-			font-size: 1.2em;
+			font-size: 1.4em;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2639,7 +2647,7 @@ input, select, textarea {
 
 		#header h1 {
 			color: rgba(255, 255, 255, 0.5);
-			font-size: 1.4em;
+			font-size: 1.3em;
 			line-height: 1.75em;
 			margin: 0;
 		}
@@ -3163,7 +3171,7 @@ input, select, textarea {
 			}
 
 				#header h1 {
-					font-size: 1.5em;
+					/* font-size: 1.5em; */
 				}
 
 			#header strong, #header b {

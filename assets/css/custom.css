@@ -24,6 +24,10 @@
     margin-bottom: 2rem;
 }
 
+ul.labeled-icons li a {
+    padding: 13px 0;
+}
+
 @media screen and (max-width: 1800px) {
 
     /* .row > * {
