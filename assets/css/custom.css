@@ -1,3 +1,35 @@
+/* Contact form submit: butter yellow + muted purple; hover inverts */
+.contact-form-section input[type="submit"].primary {
+    /* background-color: #f9edbf; */
+    background-color: #6e5d7c;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #6e5d7c;
+    color: #f9edbf !important;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.contact-form-section input[type="submit"].primary:hover {
+    background-color: #f9edbf;
+    border-color: #6e5d7c;
+    color: #6e5d7c !important;
+}
+
+.contact-form-section input[type="submit"].primary:active {
+    background-color: #5a4b65;
+    border-color: #5a4b65;
+    color: #f9edbf !important;
+}
+
+.contact-form-section input[type="submit"].primary:focus-visible {
+    outline: 1px solid #6e5d7c;
+    outline-offset: 2px;
+}
+
 .flex {
     display: flex;
     align-items: center;

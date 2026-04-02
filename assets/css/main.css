@@ -106,27 +106,33 @@ input, select, textarea {
 	}
 
 	a {
-		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		transition: 
-			color 0.2s ease-in-out, 
-			border-color 0.1s ease-in-out, 
-			font-size 0.1s ease-in-out, 
-			font-weight 0.1s ease-in-out, 
-			text-decoration-thickness 0.1s ease-in-out, 
-			text-underline-offset 0.1s ease-in-out;
+		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, text-decoration-color 0.12s ease-out;
+		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, text-decoration-color 0.12s ease-out;
+		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, text-decoration-color 0.12s ease-out;
+		transition:
+			color 0.2s ease-in-out,
+			border-color 0.2s ease-in-out,
+			text-decoration-color 0.12s ease-out;
 		color: #226250;
-		/* text-decoration: none; */
 		text-decoration: underline;
+		text-decoration-color: transparent;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #226250 !important;
-			font-size: 0.98rem;
-			font-weight: 600;
-			text-decoration-thickness: 2px;
+			/* color: #f9edbf !important; */
+			text-decoration: underline;
+			text-decoration-color: currentColor;
+		}
+
+		a.image,
+		a.thumb {
+			text-decoration: none;
+		}
+
+		a.image:hover,
+		a.thumb:hover {
+			text-decoration: none;
 		}
 
 	strong, b {
@@ -1854,7 +1860,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #226250;
+			border-color: #6e5d7c;
 		}
 
 	select {
@@ -2604,9 +2610,10 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
+		background-color: #164942;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png");
+		/* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -2639,6 +2646,7 @@ input, select, textarea {
 		#header strong, #header b {
 			color: #ffffff;
 			font-size: 1.4em;
+			font-weight: 600;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2646,7 +2654,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255, 0.7);
 			font-size: 1.3em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2665,6 +2673,10 @@ input, select, textarea {
 
 		#footer .icons a {
 			color: rgba(255, 255, 255, 0.4);
+		}
+
+		#footer .icons a:hover {
+			color: #f9edbf
 		}
 
 	#footer .copyright {
