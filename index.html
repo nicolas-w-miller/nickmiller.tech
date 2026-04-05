@@ -41,7 +41,16 @@
 			</header>
 
 		<!-- Main -->
-			<main id="main">	
+			<main id="main">
+
+				<!-- Section Nav -->
+				<nav class="section-nav" aria-label="Jump to section">
+					<a href="#one">Development Portfolio</a>
+					<span class="section-nav-sep" aria-hidden="true">&#183;</span>
+					<a href="#Two">Project Management Highlights</a>
+					<!-- <span class="section-nav-sep" aria-hidden="true">&#183;</span>
+					<a href="#case-studies">Case Studies</a> -->
+				</nav>
 
 				<!-- One -->
 					<section id="one">
@@ -129,6 +138,105 @@
 							</div>
 						</section>
 
+						<!-- Case Studies (hidden until ready) -->
+						<template>
+						<section id="case-studies">
+							<h2>Case Studies</h2>
+							<div class="case-studies-slider">
+								<div class="cs-viewport-outer">
+								<button class="cs-prev" aria-label="Previous case study">&#8249;</button>
+								<div class="cs-viewport">
+								<div class="cs-track">
+
+									<div class="cs-slide">
+										<div class="cs-info">
+											<h3>Boosting Conversions for a Retail Brand</h3>
+											<p>Redesigned checkout flow and product pages, resulting in a 38% increase in completed purchases over 90 days.</p>
+											<ul class="cs-meta">
+												<li><span class="cs-meta-label">Client</span><span class="cs-meta-value">Placeholder Co.</span></li>
+												<li><span class="cs-meta-label">Timeline</span><span class="cs-meta-value">3 months</span></li>
+												<li><span class="cs-meta-label">Role</span><span class="cs-meta-value">Project Manager &amp; Lead Developer</span></li>
+											</ul>
+											<span class="cs-tag">E-Commerce</span>
+										</div>
+										<div class="cs-image">
+											<img src="images/thumbs/aces.jpeg" alt="Case study placeholder image" />
+										</div>
+									</div>
+
+									<div class="cs-slide">
+										<div class="cs-info">
+											<h3>Streamlining Patient Intake for a Clinic</h3>
+											<p>Implemented an online intake system that reduced front-desk workload by 50% and improved patient satisfaction scores.</p>
+											<ul class="cs-meta">
+												<li><span class="cs-meta-label">Client</span><span class="cs-meta-value">Placeholder Health</span></li>
+												<li><span class="cs-meta-label">Timeline</span><span class="cs-meta-value">2 months</span></li>
+												<li><span class="cs-meta-label">Role</span><span class="cs-meta-value">Project Manager</span></li>
+											</ul>
+											<span class="cs-tag">Healthcare</span>
+										</div>
+										<div class="cs-image">
+											<img src="images/thumbs/goldenberg.jpeg" alt="Case study placeholder image" />
+										</div>
+									</div>
+
+									<div class="cs-slide">
+										<div class="cs-info">
+											<h3>Rebranding a Law Firm&#39;s Online Presence</h3>
+											<p>Delivered a full site redesign and SEO overhaul, driving a 60% increase in organic traffic within six months.</p>
+											<ul class="cs-meta">
+												<li><span class="cs-meta-label">Client</span><span class="cs-meta-value">Placeholder Legal</span></li>
+												<li><span class="cs-meta-label">Timeline</span><span class="cs-meta-value">4 months</span></li>
+												<li><span class="cs-meta-label">Role</span><span class="cs-meta-value">Project Manager &amp; Developer</span></li>
+											</ul>
+											<span class="cs-tag">Professional Services</span>
+										</div>
+										<div class="cs-image">
+											<img src="images/thumbs/bayareaortho.jpeg" alt="Case study placeholder image" />
+										</div>
+									</div>
+
+									<div class="cs-slide">
+										<div class="cs-info">
+											<h3>Launching a Multi-Location Practice Site</h3>
+											<p>Built and launched a unified website for a multi-location orthodontics group, consolidating 4 separate sites into one.</p>
+											<ul class="cs-meta">
+												<li><span class="cs-meta-label">Client</span><span class="cs-meta-value">Placeholder Ortho Group</span></li>
+												<li><span class="cs-meta-label">Timeline</span><span class="cs-meta-value">5 months</span></li>
+												<li><span class="cs-meta-label">Role</span><span class="cs-meta-value">Lead Developer</span></li>
+											</ul>
+											<span class="cs-tag">Orthodontics</span>
+										</div>
+										<div class="cs-image">
+											<img src="images/thumbs/aces.jpeg" alt="Case study placeholder image" />
+										</div>
+									</div>
+
+									<div class="cs-slide">
+										<div class="cs-info">
+											<h3>Modernizing a Non-Profit&#39;s Digital Outreach</h3>
+											<p>Redesigned the donation flow and event pages, increasing online donations by 45% year-over-year.</p>
+											<ul class="cs-meta">
+												<li><span class="cs-meta-label">Client</span><span class="cs-meta-value">Placeholder Foundation</span></li>
+												<li><span class="cs-meta-label">Timeline</span><span class="cs-meta-value">2 months</span></li>
+												<li><span class="cs-meta-label">Role</span><span class="cs-meta-value">Project Manager &amp; Developer</span></li>
+											</ul>
+											<span class="cs-tag">Non-Profit</span>
+										</div>
+										<div class="cs-image">
+											<img src="images/thumbs/goldenberg.jpeg" alt="Case study placeholder image" />
+										</div>
+									</div>
+
+								</div><!-- /.cs-track -->
+								</div><!-- /.cs-viewport -->
+								<button class="cs-next" aria-label="Next case study">&#8250;</button>
+								</div><!-- /.cs-viewport-outer -->
+								<div class="cs-dots"></div>
+							</div><!-- /.case-studies-slider -->
+						</section>
+						</template>
+
 						<!-- Three -->
 					<section  id="contact" class="contact-form-section" aria-labelledby="contact-heading">
 						<h2>Get In Touch</h2>
@@ -190,6 +298,46 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<!-- <script src="api-call.js"></script> -->
+
+		<!-- Case Studies Slider -->
+			<script>
+				$(function () {
+					var $slider = $('.case-studies-slider');
+					var $slides = $slider.find('.cs-slide');
+					var total = $slides.length;
+					var current = 0;
+
+					// Build dots
+					var $dotsContainer = $slider.find('.cs-dots');
+					for (var i = 0; i < total; i++) {
+						$dotsContainer.append('<button class="cs-dot" aria-label="Go to slide ' + (i + 1) + '"></button>');
+					}
+					var $dots = $dotsContainer.find('.cs-dot');
+
+					function goTo(index) {
+						current = index;
+						$slides.removeClass('active');
+						$slides.eq(current).addClass('active');
+						$dots.removeClass('active').eq(current).addClass('active');
+						$slider.find('.cs-prev').prop('disabled', current === 0);
+						$slider.find('.cs-next').prop('disabled', current === total - 1);
+					}
+
+					$slider.find('.cs-next').on('click', function () {
+						if (current < total - 1) goTo(current + 1);
+					});
+
+					$slider.find('.cs-prev').on('click', function () {
+						if (current > 0) goTo(current - 1);
+					});
+
+					$dots.on('click', function () {
+						goTo($(this).index());
+					});
+
+					goTo(0);
+				});
+			</script>
 
 	</body>
 </html>
