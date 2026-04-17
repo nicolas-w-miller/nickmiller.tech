@@ -447,7 +447,7 @@ section#Two {
 }
 
 section#contact {
-  padding: 5rem 2.5rem !important;
+  padding: 5rem 2.5rem 2.5rem !important;
   background: var(--color-contact-bg);
 }
 
@@ -498,6 +498,7 @@ section#contact > * {
 section#contact .section-eyebrow { color: var(--color-purple-light); }
 section#contact .section-header h2 { color: #ffffff !important; }
 section#contact .section-subtitle  { color: rgba(232, 224, 245, 0.62); }
+section#contact .section-header { margin-bottom: 0; }
 
 /* ── 6. Project Cards ─────────────────────────────────────── */
 
@@ -657,6 +658,28 @@ section#Two .row > article:hover .image.fit img {
 
 /* ── 7. Contact Section ───────────────────────────────────── */
 
+section#contact .row {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+section#contact .col-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+section#contact .calendly-inline-widget {
+  display: block;
+  margin: 0 auto;
+  height: 820px !important;
+}
+
+@media screen and (max-width: 768px) {
+  section#contact .calendly-inline-widget {
+    height: 690px !important;
+  }
+}
+
 section#contact input[type="text"],
 section#contact input[type="email"],
 section#contact textarea {
@@ -761,7 +784,7 @@ section#contact .actions {
   width: 100% !important;
   background-color: var(--color-footer-bg) !important;
   background-image: none !important;
-  padding: 5rem 2rem 2.75rem !important;
+  padding: 2.75rem 2rem !important;
   text-align: center;
   border-top: 1px solid rgba(124, 92, 191, 0.18);
 }
@@ -906,12 +929,20 @@ section#contact .actions {
   }
 
   section#one,
-  section#Two,
+  section#Two {
+    padding: 4rem 2rem 4rem !important;
+  }
+
   section#contact {
-    padding: 5.5rem 1.25rem;
+    padding: 4rem 2rem 2rem !important;
   }
 
   .section-header { margin-bottom: 2.5rem; }
+  section#contact .section-header { margin-bottom: 2rem; }
+
+  #header > .inner {
+    padding-bottom: 4rem !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
