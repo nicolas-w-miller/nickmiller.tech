@@ -676,7 +676,7 @@ section#contact .calendly-inline-widget {
 
 @media screen and (max-width: 768px) {
   section#contact .calendly-inline-widget {
-    height: 690px !important;
+    height: 720px !important;
   }
 }
 
@@ -892,8 +892,8 @@ section#contact .actions {
 @media screen and (max-width: 768px) {
   #header {
     height: auto !important;
-    min-height: 100svh;
-    padding: 5.5rem 1.5rem 3.5rem !important;
+    min-height: 0 !important;
+    padding: 5.5rem 1.5rem 7rem !important;
   }
 
   #header > .inner {
@@ -940,9 +940,6 @@ section#contact .actions {
   .section-header { margin-bottom: 2.5rem; }
   section#contact .section-header { margin-bottom: 2rem; }
 
-  #header > .inner {
-    padding-bottom: 4rem !important;
-  }
 }
 
 @media screen and (max-width: 480px) {
