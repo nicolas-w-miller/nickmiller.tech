@@ -51,29 +51,13 @@
   overflow: hidden;
 }
 
-/* Remove main.css left-offset for sidebar layout */
-#main {
-  margin-left: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-}
-
-/* Remove section borders/margins — bg colors act as dividers */
-#main > section {
-  border-top: none !important;
-  margin: 0 !important;
-}
-
 /* Kill main.css's red h2 color */
 h2 {
   color: var(--color-text-dark) !important;
 }
 
-/* Suppress main.css medium breakpoint re-applying padding */
 @media screen and (max-width: 980px) {
   #header { padding: 0 !important; }
-  #main   { margin: 0 !important; padding: 0 !important; width: 100% !important; }
 }
 
 /* ── 3. Sticky Nav ────────────────────────────────────────── */
@@ -410,7 +394,7 @@ body.is-preload .hero-avatar-wrap { animation: none; opacity: 0; }
   flex-direction: column;
   align-items: center;
   gap: 0.35rem;
-  color: rgba(232, 224, 245, 0.38);
+  color: rgba(232, 224, 245, 0.62);
   font-size: 0.68rem;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.12em;
@@ -676,7 +660,7 @@ section#contact .calendly-inline-widget {
 
 @media screen and (max-width: 768px) {
   section#contact .calendly-inline-widget {
-    height: 720px !important;
+    height: 690px !important;
   }
 }
 
@@ -810,7 +794,7 @@ section#contact .actions {
 #footer .icons li { padding: 0; }
 
 #footer .icons a {
-  color: rgba(232, 224, 245, 0.42) !important;
+  color: rgba(232, 224, 245, 0.72) !important;
   font-size: 1.05rem;
   display: inline-flex;
   align-items: center;
@@ -834,10 +818,186 @@ section#contact .actions {
 
 .footer-copy {
   font-family: 'Inter', sans-serif;
-  font-size: 0.73rem;
-  color: rgba(232, 224, 245, 0.28);
+  font-size: 0.8rem;
+  color: rgba(232, 224, 245, 0.72);
   margin: 0;
   letter-spacing: 0.04em;
+}
+
+.footer-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(232, 224, 245, 0.68);
+  margin: 0.5rem 0 0;
+  letter-spacing: 0.04em;
+}
+
+.footer-meta a {
+  color: rgba(232, 224, 245, 0.88) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-base);
+}
+
+.footer-meta a:hover {
+  color: var(--color-gold) !important;
+}
+
+/* Minimal nav (legal/content pages) — always visible, no scroll-trigger */
+#sticky-nav.nav-minimal {
+  transform: translateY(0) !important;
+  background: rgba(26, 21, 37, 0.96) !important;
+  border-bottom-color: rgba(124, 92, 191, 0.28) !important;
+}
+
+.nav-back {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(232, 224, 245, 0.72) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.04em;
+  transition: color var(--transition-base);
+}
+
+.nav-back:hover,
+.nav-back:focus-visible {
+  color: var(--color-gold) !important;
+}
+
+.nav-back:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-minimal .nav-back {
+    font-size: 0.8rem;
+  }
+}
+
+/* Legal / content pages */
+.legal-page {
+  background: var(--color-contact-bg);
+  padding: calc(var(--nav-height) + 4rem) 2rem 5rem;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+@media screen and (max-width: 1024px) {
+  .legal-page {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.legal-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(232, 224, 245, 0.88) !important;
+}
+
+.legal-content .section-header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(124, 92, 191, 0.22);
+}
+
+.legal-content .section-eyebrow {
+  color: var(--color-purple-light) !important;
+  margin-bottom: 0.5rem;
+}
+
+.legal-content h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(2rem, 4vw, 2.6rem) !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin: 0 0 0.75rem !important;
+  letter-spacing: -0.01em;
+}
+
+.legal-content .section-subtitle {
+  color: rgba(232, 224, 245, 0.62) !important;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.legal-content h2 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin: 2.75rem 0 0.9rem !important;
+  letter-spacing: 0.005em;
+}
+
+.legal-content h2:first-of-type {
+  margin-top: 0 !important;
+}
+
+.legal-content p {
+  color: rgba(232, 224, 245, 0.88) !important;
+  margin: 0 0 1.1rem;
+}
+
+.legal-content ul {
+  padding-left: 1.35rem;
+  margin: 0 0 1.25rem;
+}
+
+.legal-content li {
+  color: rgba(232, 224, 245, 0.88) !important;
+  margin-bottom: 0.6rem;
+}
+
+.legal-content a {
+  color: var(--color-gold) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--transition-base), text-decoration-color var(--transition-base);
+}
+
+.legal-content a:hover,
+.legal-content a:focus-visible {
+  color: var(--color-gold-warm) !important;
+}
+
+.legal-content a:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.legal-content strong {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .legal-page {
+    padding: calc(var(--nav-height) + 2.5rem) 1.75rem 3.5rem;
+  }
+
+  .legal-content {
+    padding: 0;
+    font-size: 0.95rem;
+  }
+
+  .legal-content .section-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .legal-content h2 {
+    margin-top: 2.25rem !important;
+  }
 }
 
 /* ── 9. Scroll Reveal ─────────────────────────────────────── */

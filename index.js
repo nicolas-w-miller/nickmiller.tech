@@ -18,8 +18,15 @@ const server = http.createServer((req, res) => {
     });
   } else {
     // Serve other static assets (CSS, JS, etc.)
-    const filePath = path.join(__dirname, req.url);
-    const extname = path.extname(filePath);
+    let filePath = path.join(__dirname, req.url);
+    let extname = path.extname(filePath);
+
+    // Clean URLs: map extensionless paths (e.g. /privacy-policy) to .html
+    if (!extname) {
+      filePath = filePath.replace(/\/$/, '') + '.html';
+      extname = '.html';
+    }
+
     let contentType = 'text/plain';
 
     if (extname === '.html') {
