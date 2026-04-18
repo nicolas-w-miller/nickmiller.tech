@@ -4,11 +4,15 @@
 		<title>Web Development Specialist | Nick Miller</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Nick Miller — freelance web developer & project manager building accessible, high-converting websites for orthodontic practices and healthcare businesses." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		<!-- Preload critical FontAwesome fonts -->
+		<link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
 		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!-- Calendly (preconnect so the embed is warm when scrolled into view) -->
 		<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
@@ -59,7 +63,10 @@
 					</div>
 				</div>
 				<div class="hero-avatar-wrap">
-					<img class="hero-avatar" src="images/profile-image-02.jpg" alt="Headshot of Nick Miller" />
+					<picture>
+						<source srcset="images/profile-image-02.webp" type="image/webp">
+						<img class="hero-avatar" src="images/profile-image-02.jpg" alt="Headshot of Nick Miller" />
+					</picture>
 				</div>
 			</div>
 			<div class="hero-scroll-cue" aria-hidden="true">Scroll</div>
@@ -77,39 +84,39 @@
 				</div>
 				<div class="row">
 					<article class="col-6 col-12-xsmall">
-						<a href="https://theballetalliance.org/" class="image fit thumb" target="_blank" aria-label="The Ballet Alliance"><img src="images/thumbs/tba.jpeg" alt="The Ballet Alliance website (opens in a new tab)" /></a>
+						<a href="https://theballetalliance.org/" class="image fit thumb" target="_blank" aria-label="The Ballet Alliance"><picture><source srcset="images/thumbs/tba.webp" type="image/webp"><img src="images/thumbs/tba.jpeg" alt="The Ballet Alliance website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://theballetalliance.org/" target="_blank" aria-label="The Ballet Alliance"><h3>The Ballet Alliance</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.elevatemysmile.com/" class="image fit thumb" target="_blank" aria-label="Elevate Orthodontics"><img src="images/thumbs/elevate.jpeg" alt="Elevate Orthodontics website (opens in a new tab)" /></a>
+						<a href="https://www.elevatemysmile.com/" class="image fit thumb" target="_blank" aria-label="Elevate Orthodontics"><picture><source srcset="images/thumbs/elevate.webp" type="image/webp"><img src="images/thumbs/elevate.jpeg" alt="Elevate Orthodontics website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.elevatemysmile.com/" target="_blank" aria-label="Elevate Orthodontics"><h3>Elevate Orthodontics</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.psbraces.com/" class="image fit thumb" target="_blank" aria-label="PS Orthodontics"><img src="images/thumbs/psbraces.jpeg" alt="PS Orthodontics website (opens in a new tab)" /></a>
+						<a href="https://www.psbraces.com/" class="image fit thumb" target="_blank" aria-label="PS Orthodontics"><picture><source srcset="images/thumbs/psbraces.webp" type="image/webp"><img src="images/thumbs/psbraces.jpeg" alt="PS Orthodontics website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.psbraces.com/" target="_blank" aria-label="PS Orthodontics"><h3>PS Orthodontics</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.theurerorthodontics.com/" class="image fit thumb" target="_blank" aria-label="Theurer Orthodontics"><img src="images/thumbs/theurerortho.jpeg" alt="Theurer Orthodontics website (opens in a new tab)" /></a>
+						<a href="https://www.theurerorthodontics.com/" class="image fit thumb" target="_blank" aria-label="Theurer Orthodontics"><picture><source srcset="images/thumbs/theurerortho.webp" type="image/webp"><img src="images/thumbs/theurerortho.jpeg" alt="Theurer Orthodontics website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.theurerorthodontics.com/" target="_blank" aria-label="Theurer Orthodontics"><h3>Theurer Orthodontics</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.implantclub.com/" class="image fit thumb" target="_blank" aria-label="Implant Club"><img src="images/thumbs/implantclub.jpeg" alt="Implant Club website (opens in a new tab)" /></a>
+						<a href="https://www.implantclub.com/" class="image fit thumb" target="_blank" aria-label="Implant Club"><picture><source srcset="images/thumbs/implantclub.webp" type="image/webp"><img src="images/thumbs/implantclub.jpeg" alt="Implant Club website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.implantclub.com/" target="_blank" aria-label="Implant Club"><h3>Implant Club</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.drgrecoortho.com/" class="image fit thumb" target="_blank" aria-label="Dr. Greco Orthodontics"><img src="images/thumbs/greco.jpeg" alt="Dr. Greco Orthodontics website (opens in a new tab)" /></a>
+						<a href="https://www.drgrecoortho.com/" class="image fit thumb" target="_blank" aria-label="Dr. Greco Orthodontics"><picture><source srcset="images/thumbs/greco.webp" type="image/webp"><img src="images/thumbs/greco.jpeg" alt="Dr. Greco Orthodontics website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.drgrecoortho.com/" target="_blank" aria-label="Dr. Greco Orthodontics"><h3>Dr. Greco Orthodontics</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.myyonkersorthodontist.com/" class="image fit thumb" target="_blank" aria-label="Anvery Orthodontics"><img src="images/thumbs/myyonkersorthodontist.jpeg" alt="Myyonkersorthodontist.com website (opens in a new tab)" /></a>
+						<a href="https://www.myyonkersorthodontist.com/" class="image fit thumb" target="_blank" aria-label="Anvery Orthodontics"><picture><source srcset="images/thumbs/myyonkersorthodontist.webp" type="image/webp"><img src="images/thumbs/myyonkersorthodontist.jpeg" alt="Myyonkersorthodontist.com website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.myyonkersorthodontist.com/" target="_blank" aria-label="Anvery Orthodontics"><h3>Anvery Orthodontics</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.nelsonfamilyortho.com/" class="image fit thumb" target="_blank" aria-label="Nelson Family Orthodontics"><img src="images/thumbs/nelson.jpeg" alt="Nelson Family Orthodontics website (opens in a new tab)" /></a>
+						<a href="https://www.nelsonfamilyortho.com/" class="image fit thumb" target="_blank" aria-label="Nelson Family Orthodontics"><picture><source srcset="images/thumbs/nelson.webp" type="image/webp"><img src="images/thumbs/nelson.jpeg" alt="Nelson Family Orthodontics website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.nelsonfamilyortho.com/" target="_blank" aria-label="Nelson Family Orthodontics"><h3>Nelson Family Orthodontics</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.assabetorthodontics.com/" class="image fit thumb" target="_blank" aria-label="Assabet Orthodontics"><img src="images/thumbs/assabet.jpeg" alt="Assabet Orthodontics website (opens in a new tab)" /></a>
+						<a href="https://www.assabetorthodontics.com/" class="image fit thumb" target="_blank" aria-label="Assabet Orthodontics"><picture><source srcset="images/thumbs/assabet.webp" type="image/webp"><img src="images/thumbs/assabet.jpeg" alt="Assabet Orthodontics website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.assabetorthodontics.com/" target="_blank" aria-label="Assabet Orthodontics"><h3>Assabet Orthodontics</h3></a>
 					</article>
 				</div>
@@ -124,15 +131,15 @@
 				</div>
 				<div class="row">
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.acesaba.com/" class="image fit thumb" target="_blank" aria-label="Aces ABA"><img src="images/thumbs/aces.jpeg" alt="Aces ABA website (opens in a new tab)" /></a>
+						<a href="https://www.acesaba.com/" class="image fit thumb" target="_blank" aria-label="Aces ABA"><picture><source srcset="images/thumbs/aces.webp" type="image/webp"><img src="images/thumbs/aces.jpeg" alt="Aces ABA website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.acesaba.com/" target="_blank" aria-label="Aces ABA"><h3>Aces ABA</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://www.goldenbergorthodontics.com/" class="image fit thumb" target="_blank" aria-label="Goldenberg Orthodontics"><img src="images/thumbs/goldenberg.jpeg" alt="Goldenberg Orthodontics website (opens in a new tab)" /></a>
+						<a href="https://www.goldenbergorthodontics.com/" class="image fit thumb" target="_blank" aria-label="Goldenberg Orthodontics"><picture><source srcset="images/thumbs/goldenberg.webp" type="image/webp"><img src="images/thumbs/goldenberg.jpeg" alt="Goldenberg Orthodontics website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://www.goldenbergorthodontics.com/" target="_blank" aria-label="Goldenberg Orthodontics"><h3>Goldenberg Orthodontics</h3></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="https://bayareaortho.roostergrintemplates.com/" class="image fit thumb" target="_blank" aria-label="Bay Area Ortho"><img src="images/thumbs/bayareaortho.jpeg" alt="Bay Area Ortho website (opens in a new tab)" /></a>
+						<a href="https://bayareaortho.roostergrintemplates.com/" class="image fit thumb" target="_blank" aria-label="Bay Area Ortho"><picture><source srcset="images/thumbs/bayareaortho.webp" type="image/webp"><img src="images/thumbs/bayareaortho.jpeg" alt="Bay Area Ortho website (opens in a new tab)" loading="lazy" /></picture></a>
 						<a href="https://bayareaortho.roostergrintemplates.com/" target="_blank" aria-label="Bay Area Ortho"><h3>Bay Area Ortho Template</h3></a>
 					</article>
 				</div>
