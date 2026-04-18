@@ -151,34 +151,5 @@
 
 		$window.on('load', initScrollReveal);
 
-	// ── Lightbox (poptrox) ────────────────────────────────────────
-		$window.on('load', function() {
-			$('#one').poptrox({
-				caption: function($a) { return $a.next('h3').text() || $a.find('img').attr('alt') || ''; },
-				overlayColor: '#1a1525',
-				overlayOpacity: 0.92,
-				popupCloserText: '',
-				popupLoaderText: '',
-				selector: 'a.image',
-				usePopupCaption: true,
-				usePopupDefaultStyling: false,
-				usePopupEasyClose: true,
-				usePopupNav: true,
-				windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-			});
-			$('#Two').poptrox({
-				caption: function($a) { return $a.next('h3').text() || $a.find('img').attr('alt') || ''; },
-				overlayColor: '#1a1525',
-				overlayOpacity: 0.92,
-				popupCloserText: '',
-				popupLoaderText: '',
-				selector: 'a.image',
-				usePopupCaption: true,
-				usePopupDefaultStyling: false,
-				usePopupEasyClose: true,
-				usePopupNav: true,
-				windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-			});
-		});
 
 })(jQuery);
