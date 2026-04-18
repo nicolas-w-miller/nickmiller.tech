@@ -20,5 +20,8 @@
   "homepage": "https://github.com/nicolas-w-miller/nickmiller.tech#readme",
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
   }
 }
