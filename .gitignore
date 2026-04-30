@@ -20,3 +20,4 @@ CNAME
 
 # Dependency directories (for some package managers)
 bower_components/
+.claude/
