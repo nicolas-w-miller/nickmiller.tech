@@ -124,7 +124,7 @@
 			smoothScrollTo(href);
 		});
 
-		$('.btn-primary-hero, .btn-secondary-hero').on('click', function(e) {
+		$('.btn-primary-hero').on('click', function(e) {
 			e.preventDefault();
 			smoothScrollTo($(this).attr('href'));
 		});

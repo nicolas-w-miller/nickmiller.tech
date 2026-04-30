@@ -430,15 +430,9 @@ section#Two {
   background: var(--color-section-alt);
 }
 
-section#contact {
-  padding: 5rem 2.5rem 2.5rem !important;
-  background: var(--color-contact-bg);
-}
-
 /* Constrain content width per section */
 section#one > *,
-section#Two > *,
-section#contact > * {
+section#Two > * {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -477,12 +471,6 @@ section#contact > * {
   margin: 0 auto;
   line-height: 1.68;
 }
-
-/* Contact section — text on dark background */
-section#contact .section-eyebrow { color: var(--color-purple-light); }
-section#contact .section-header h2 { color: #ffffff !important; }
-section#contact .section-subtitle  { color: rgba(232, 224, 245, 0.62); }
-section#contact .section-header { margin-bottom: 0; }
 
 /* ── 6. Project Cards ─────────────────────────────────────── */
 
@@ -640,123 +628,60 @@ section#Two .row > article:hover .image.fit img {
   }
 }
 
-/* ── 7. Contact Section ───────────────────────────────────── */
+/* ── 7. Floating Schedule Button ──────────────────────────── */
 
-section#contact .row {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-section#contact .col-12 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-section#contact .calendly-inline-widget {
-  display: block;
-  margin: 0 auto;
-  height: 820px !important;
-}
-
-@media screen and (max-width: 768px) {
-  section#contact .calendly-inline-widget {
-    height: 690px !important;
-  }
-}
-
-section#contact input[type="text"],
-section#contact input[type="email"],
-section#contact textarea {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border: 1px solid rgba(124, 92, 191, 0.32) !important;
-  color: var(--color-text-hero) !important;
-  border-radius: 8px;
+.fab-schedule {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-gold);
+  color: var(--color-purple-deep);
+  text-decoration: none;
+  border: 1px solid rgba(74, 52, 112, 0.12);
+  border-radius: 50px;
+  padding: 0.9rem 1.5rem;
   font-family: 'Inter', sans-serif;
-  transition: border-color var(--transition-base), background var(--transition-base);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.22),
+    0 8px 28px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
-section#contact input[type="text"]::placeholder,
-section#contact input[type="email"]::placeholder,
-section#contact textarea::placeholder {
-  color: rgba(232, 224, 245, 0.38) !important;
+.fab-schedule:hover {
+  color: var(--color-purple-deep);
+  background: var(--color-gold-warm);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.28),
+    0 16px 40px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
-section#contact input[type="text"]:focus,
-section#contact input[type="email"]:focus,
-section#contact textarea:focus {
-  border-color: var(--color-purple-rich) !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  outline: none;
+.fab-schedule:active {
+  transform: translateY(-1px) scale(1.01);
 }
 
-/* Remove stray bottom margins that throw off even top/bottom spacing */
-section#contact form,
-section#contact .actions {
-  margin-bottom: 0 !important;
-}
-
-/* Submit button */
-.contact-form-section input[type="submit"].primary {
-  background: var(--color-purple-rich) !important;
-  border: 2px solid var(--color-purple-rich) !important;
-  color: #ffffff !important;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 0.84rem;
-  letter-spacing: 0.09em;
-  border-radius: 7px;
-  cursor: pointer;
-  transition:
-    background var(--transition-base),
-    border-color var(--transition-base),
-    transform var(--transition-base);
-}
-
-.contact-form-section input[type="submit"].primary:hover {
-  background: var(--color-purple-light) !important;
-  border-color: var(--color-purple-light) !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
-
-.contact-form-section input[type="submit"].primary:active {
-  background: var(--color-purple-deep) !important;
-  border-color: var(--color-purple-deep) !important;
-  color: #ffffff !important;
-  transform: translateY(0);
-}
-
-.contact-form-section input[type="submit"].primary:focus-visible {
-  outline: 2px solid var(--color-purple-light);
+.fab-schedule:focus-visible {
+  outline: 2px solid var(--color-purple-deep);
   outline-offset: 3px;
 }
 
-/* Contact info sidebar on dark background */
-.contact-info {
-  color: rgba(232, 224, 245, 0.7);
-}
-
-.contact-info .labeled-icons h3.icon {
-  color: var(--color-purple-light) !important;
-}
-
-.contact-info .labeled-icons li {
-  color: rgba(232, 224, 245, 0.65);
-  border-bottom-color: rgba(124, 92, 191, 0.18) !important;
-}
-
-.contact-info .labeled-icons a {
-  color: rgba(232, 224, 245, 0.65) !important;
-  transition: color var(--transition-base);
-}
-
-.contact-info .labeled-icons a:hover {
-  color: var(--color-gold) !important;
-}
-
-/* Show contact info on desktop, hide on small screens */
-@media screen and (max-width: 700px) {
-  .contact-info { display: none; }
+@media (max-width: 480px) {
+  .fab-schedule {
+    padding: 1rem;
+    border-radius: 50%;
+  }
+  .fab-label {
+    display: none;
+  }
 }
 
 /* ── 8. Footer ────────────────────────────────────────────── */

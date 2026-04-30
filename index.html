@@ -14,10 +14,6 @@
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<!-- Calendly (preconnect so the embed is warm when scrolled into view) -->
-		<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-		<link rel="preconnect" href="https://calendly.com" crossorigin>
-		<link rel="dns-prefetch" href="https://calendly.com">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7KW2BEMY0S"></script>
@@ -37,7 +33,7 @@
 				<ul class="nav-links">
 					<li><a href="#one">Development</a></li>
 					<li><a href="#Two">Project Management</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="https://calendly.com/nickmiller-info" target="_blank" rel="noopener">Schedule a Call</a></li>
 				</ul>
 				<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
 					<span></span><span></span><span></span>
@@ -46,7 +42,7 @@
 			<div class="nav-mobile-menu" aria-hidden="true">
 				<a href="#one">Development</a>
 				<a href="#Two">Project Management</a>
-				<a href="#contact">Contact</a>
+				<a href="https://calendly.com/nickmiller-info" target="_blank" rel="noopener" class="nav-mobile-cta">Schedule a Call</a>
 			</div>
 		</nav>
 
@@ -59,7 +55,7 @@
 					<p class="hero-tagline">Building accessible, high-converting and beautifully crafted websites that grow your business.</p>
 					<div class="hero-cta">
 						<a href="#one" class="btn-primary-hero">View Work</a>
-						<a href="#contact" class="btn-secondary-hero">Schedule a Call</a>
+						<a href="https://calendly.com/nickmiller-info" target="_blank" rel="noopener" class="btn-secondary-hero">Schedule a Call</a>
 					</div>
 				</div>
 				<div class="hero-avatar-wrap">
@@ -145,20 +141,6 @@
 				</div>
 			</section>
 
-			<!-- Contact -->
-			<section id="contact" class="contact-form-section" aria-labelledby="contact-heading">
-				<div class="section-header">
-					<p class="section-eyebrow">Say Hello</p>
-					<h2 id="contact-heading">How Can I Help You?</h2>
-					<p class="section-subtitle">Use the buttons below to schedule a phone or video call and we'll talk through your project, goals, and how I can help.</p>
-				</div>
-				<div class="row">
-					<div class="col-12">
-						<div class="calendly-inline-widget" data-url="https://calendly.com/nickmiller-info?hide_gdpr_banner=1" style="min-width:280px;height:720px;"></div>
-						<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-					</div>
-				</div>
-			</section>
 
 		</main>
 
@@ -171,7 +153,7 @@
 					<li><a href="mailto:info@nickmiller.tech" class="icon solid fa-envelope" aria-label="Send an email"><span class="label">Email</span></a></li>
 				</ul>
 				<p class="footer-copy">&copy; 2026 Nick Miller &mdash; Software Services</p>
-				<p class="footer-meta">Scheduling powered by Calendly &middot; <a href="/privacy-policy">Privacy Policy</a></p>
+				<p class="footer-meta"><a href="/privacy-policy">Privacy Policy</a></p>
 			</div>
 		</footer>
 
@@ -181,6 +163,11 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<!-- Floating schedule button -->
+		<a href="https://calendly.com/nickmiller-info" target="_blank" rel="noopener" class="fab-schedule" aria-label="Schedule a call">
+			<i class="fas fa-calendar-alt" aria-hidden="true"></i>
+			<span class="fab-label">Schedule a Call</span>
+		</a>
 
 	</body>
 </html>
